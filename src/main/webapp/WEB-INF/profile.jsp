@@ -1,12 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="partials/head.jsp">
+    <jsp:include page="../partials/head.jsp">
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="partials/navbar.jsp" />
+    <jsp:include page="../partials/navbar.jsp" />
+
+    <c:if test = "${adminView}">
+        <div>This is for Admin only!</div>
+        <div>Hypo Admin Shtuff</div>
+    </c:if>
 
     <div class="container">
         <h1>Viewing your profile.</h1>
